@@ -13,3 +13,12 @@ python timesfm/forecast_example.py
 The first run downloads the `google/timesfm-3.0-pytorch` weights from Hugging Face.
 Note: TimesFM 3.0 weights are non-commercial / non-production only; 2.5 and older
 weights are Apache-2.0 (`timesfm.TimesFM_2p5_200M_torch`, `google/timesfm-2.5-200m-pytorch`).
+
+## Forecast your own CSV
+
+```shell
+python timesfm/forecast.py data.csv --column leads --horizon 30
+```
+
+Writes `forecasts/forecast.csv` and `forecasts/forecast.png`. In a Claude Code session on this
+repo, the `forecast` skill does this for you: attach a CSV and ask for a forecast.
